@@ -1,16 +1,18 @@
 public class Main {
+
     public static void main(String[] args) {
-        double[] statist{-0.5,3.5,6.8,4.5,3.9,-0.8,-0.5,7.9,-22.3,21.3,1.2,3.7,4.3,6.7,4.4};
-        double wp = 0;
-        int lucky = 0;
-        boolean hook = false;
-        for (double numbers : statist) {
-            if (numbers > 0) {
-                lucky++;
-                wp += numbers;
+        double[] blightstone = {-3.5, 9.0, 9.5, -7.6, 4.4, -3.3,8.8, 6.5, -5.6, 3.4, -2.6, -8.0, 6.6, -5.1, 7.9};
+        double blink = 0;
+        int antimage = 0;
+        boolean tilda = false;
+        for (double wp : blightstone) {
+            if (wp < 0) {
+                tilda = true;
+            } else if (tilda) {
+                antimage++;
+                blink += wp;
             }
         }
-        System.out.println(wp / lucky);
-
+        System.out.println(blink / antimage);
     }
 }
